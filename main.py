@@ -1,3 +1,13 @@
+import threading
+import time
+import mycamera
+import cv2
+import numpy as np
+import tensorflow as tf
+from keras.metrics import MeanSquaredError
+from tensorflow.keras.models import load_model
+from gpiozero import DigitalOutputDevice, PWMOutputDevice
+
 def main():
     global image, imagednn, image_ok, image_find_ok
     global carState
