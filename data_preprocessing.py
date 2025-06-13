@@ -1,3 +1,8 @@
+import threading
+import time
+import mycamera
+import cv2
+
 def id_class_name(class_id, classes):
     for key, value in classes.items():
         if class_id == key:
