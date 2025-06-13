@@ -7,6 +7,8 @@ import tensorflow as tf
 from keras.metrics import MeanSquaredError
 from tensorflow.keras.models import load_model
 from gpiozero import DigitalOutputDevice, PWMOutputDevice
+from detect_speedbump import detect_speedbump
+from detect_traffic_sign import detect_traffic_sign
 
 def main():
     global image, imagednn, image_ok, image_find_ok
