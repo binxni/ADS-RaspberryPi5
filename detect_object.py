@@ -1,3 +1,13 @@
+import threading
+import time
+import mycamera
+import cv2
+import numpy as np
+import tensorflow as tf
+from keras.metrics import MeanSquaredError
+from tensorflow.keras.models import load_model
+from gpiozero import DigitalOutputDevice, PWMOutputDevice
+
 # 사전학습된 사물인식 모델이 감지할 수 있는 클래스 정의 -> 사람만 인식할 예정
 classNames = {
     0: 'background', 1: 'person', 2: 'bicycle', 3: 'car', 4: 'motorcycle',
