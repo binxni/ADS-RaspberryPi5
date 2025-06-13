@@ -1,3 +1,9 @@
+import threading
+import time
+import mycamera
+import cv2
+import numpy as np
+
 def detect_speedbump(image):
     # 이미지 하단 크롭 -> 과속방지턱은 밑에 있기 때문
     height, _ , _= image.shape
